@@ -118,11 +118,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref resizeWindow); }
         }
         
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
         
         private TexturePageSize texturePage;
@@ -194,7 +194,7 @@ namespace YoYoProject.Controllers
             InterpolatePixels = false;
             Vsync = false;
             ResizeWindow = false;
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             TexturePage = new TexturePageSize(2048, 2048);
             AppStore = false;
             AllowIncomingNetwork = false;
@@ -226,7 +226,7 @@ namespace YoYoProject.Controllers
                 option_mac_interpolate_pixels = InterpolatePixels,
                 option_mac_vsync = Vsync,
                 option_mac_resize_window = ResizeWindow,
-                option_mac_scale = Scale,
+                option_mac_scale = ScaleMode,
                 option_mac_texture_page = TexturePage.ToString(),
                 option_mac_build_app_store = AppStore,
                 option_mac_allow_incoming_network = AllowIncomingNetwork,
@@ -258,7 +258,7 @@ namespace YoYoProject.Controllers
             InterpolatePixels = macOptionsModel.option_mac_interpolate_pixels;
             Vsync = macOptionsModel.option_mac_vsync;
             ResizeWindow = macOptionsModel.option_mac_resize_window;
-            Scale = macOptionsModel.option_mac_scale;
+            ScaleMode = macOptionsModel.option_mac_scale;
             TexturePage = new TexturePageSize(macOptionsModel.option_mac_texture_page);
             AppStore = macOptionsModel.option_mac_build_app_store;
             AllowIncomingNetwork = macOptionsModel.option_mac_allow_incoming_network;

@@ -39,6 +39,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\AndroidCommon.cs" />
+    <Compile Include="Common\OptionsCommon.cs" />
     <Compile Include="Common\TexturePageSize.cs" />
     <Compile Include="ConfigDelta.cs" />
     <Compile Include="ConfigTree.cs" />

@@ -33,11 +33,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref interpolatePixels); }
         }
 
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
 
         private string projectNmeta;
@@ -63,7 +63,7 @@ namespace YoYoProject.Controllers
             EnableFileAccessChecking = true;
             EnableNEXLibraries = false;
             InterpolatePixels = true;
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             TexturePage = new TexturePageSize(2048, 2048);
             ProjectNmeta = @"${options_dir}/switch/application.nmeta"; // I don't bundle the default nmeta as it's 100% under NDA.
         }
@@ -79,7 +79,7 @@ namespace YoYoProject.Controllers
                 option_switch_enable_nex_libraries = EnableNEXLibraries,
                 option_switch_interpolate_pixels = InterpolatePixels,
                 option_switch_project_nmeta = ProjectNmeta,
-                option_switch_scale = Scale,
+                option_switch_scale = ScaleMode,
                 option_switch_texture_page = TexturePage.ToString()
             };
         }
@@ -95,7 +95,7 @@ namespace YoYoProject.Controllers
             EnableNEXLibraries = switchOptionsModel.option_switch_enable_nex_libraries;
             InterpolatePixels = switchOptionsModel.option_switch_interpolate_pixels;
             ProjectNmeta = switchOptionsModel.option_switch_project_nmeta;
-            Scale = switchOptionsModel.option_switch_scale;
+            ScaleMode = switchOptionsModel.option_switch_scale;
             TexturePage = new TexturePageSize(switchOptionsModel.option_switch_texture_page);
         }
     }

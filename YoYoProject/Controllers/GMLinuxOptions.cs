@@ -110,11 +110,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref resizeWindow); }
         }
         
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
         
         private TexturePageSize texturePage;
@@ -157,7 +157,7 @@ namespace YoYoProject.Controllers
             DisplayCursor = true;
             Vsync = false;
             ResizeWindow = false;
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             TexturePage = new TexturePageSize(2048, 2048);
             EnableSteam = false;
             DisableSandbox = false;
@@ -184,7 +184,7 @@ namespace YoYoProject.Controllers
                 option_linux_display_cursor = DisplayCursor,
                 option_linux_sync = Vsync,
                 option_linux_resize_window = ResizeWindow,
-                option_linux_scale = Scale,
+                option_linux_scale = ScaleMode,
                 option_linux_texture_page = TexturePage.ToString(),
                 option_linux_enable_steam = EnableSteam,
                 option_linux_disable_sandbox = DisableSandbox
@@ -212,7 +212,7 @@ namespace YoYoProject.Controllers
             DisplayCursor = linuxOptionsModel.option_linux_display_cursor;
             Vsync = linuxOptionsModel.option_linux_sync;
             ResizeWindow = linuxOptionsModel.option_linux_resize_window;
-            Scale = linuxOptionsModel.option_linux_scale;
+            ScaleMode = linuxOptionsModel.option_linux_scale;
             TexturePage = new TexturePageSize(linuxOptionsModel.option_linux_texture_page);
             EnableSteam = linuxOptionsModel.option_linux_enable_steam;
             DisableSandbox = linuxOptionsModel.option_linux_disable_sandbox;

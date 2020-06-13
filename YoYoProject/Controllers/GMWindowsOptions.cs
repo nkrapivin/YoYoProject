@@ -132,11 +132,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref borderless); }
         }
         
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
         
         private int sleepMargin;
@@ -217,7 +217,7 @@ namespace YoYoProject.Controllers
             Vsync = false;
             ResizeWindow = false;
             Borderless = false;
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             SleepMargin = 10;
             TexturePage = new TexturePageSize(2048, 2048);
             InstallerFinished = @"${base_options_dir}\windows\installer\finished.bmp"; // TODO Copy in default
@@ -251,7 +251,7 @@ namespace YoYoProject.Controllers
                 option_windows_vsync = Vsync,
                 option_windows_resize_window = ResizeWindow,
                 option_windows_borderless = Borderless,
-                option_windows_scale = Scale,
+                option_windows_scale = ScaleMode,
                 option_windows_sleep_margin = SleepMargin,
                 option_windows_texture_page = TexturePage.ToString(),
                 option_windows_installer_finished = InstallerFinished,
@@ -287,7 +287,7 @@ namespace YoYoProject.Controllers
             Vsync = windowOptionsModel.option_windows_vsync;
             ResizeWindow = windowOptionsModel.option_windows_resize_window;
             Borderless = windowOptionsModel.option_windows_borderless;
-            Scale = windowOptionsModel.option_windows_scale;
+            ScaleMode = windowOptionsModel.option_windows_scale;
             SleepMargin = windowOptionsModel.option_windows_sleep_margin;
             TexturePage = new TexturePageSize(windowOptionsModel.option_windows_texture_page);
             InstallerFinished = windowOptionsModel.option_windows_installer_finished;

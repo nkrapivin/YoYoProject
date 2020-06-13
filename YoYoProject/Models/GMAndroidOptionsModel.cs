@@ -3,26 +3,6 @@ using YoYoProject.Common;
 
 namespace YoYoProject
 {
-    namespace Common
-    {
-        public enum DeviceSupport : int
-        {
-            OnlyWithGPU, // Only install on devices with a GPU.
-            AllDevices // Install on any supported device.
-        }
-
-        public enum InstallLocation : int
-        {
-            Automatic,
-            PreferExternal
-        }
-
-        public enum ScreenDepth : int
-        {
-            SixteenBit, // yes, as words, because 16Bit is illegal.
-            TwentyFourBit
-        }
-    }
     [DataContract]
     internal sealed class GMAndroidOptionsModel : GMOptionsBaseModel
     {

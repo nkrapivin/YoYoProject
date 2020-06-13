@@ -138,11 +138,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref outputName); }
         }
 
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
 
         private string splashPng;
@@ -224,7 +224,7 @@ namespace YoYoProject.Controllers
             LocalRunAlert = true;
             OutDebugToConsole = true;
             OutputName = "index.html";
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             SplashPng = @"${base_options_dir}/html5/splash.png";
             TexturePage = new TexturePageSize(2048, 2048);
             UseFacebook = false;
@@ -260,7 +260,7 @@ namespace YoYoProject.Controllers
                 option_html5_localrunalert = LocalRunAlert,
                 option_html5_outputdebugtoconsole = OutDebugToConsole,
                 option_html5_outputname = OutputName,
-                option_html5_scale = Scale,
+                option_html5_scale = ScaleMode,
                 option_html5_splash_png = SplashPng,
                 option_html5_texture_page = TexturePage.ToString(),
                 option_html5_usebuiltinfont = UseBuiltinFont,
@@ -297,7 +297,7 @@ namespace YoYoProject.Controllers
             LocalRunAlert = Html5OptionsModel.option_html5_localrunalert;
             OutDebugToConsole = Html5OptionsModel.option_html5_outputdebugtoconsole;
             OutputName = Html5OptionsModel.option_html5_outputname;
-            Scale = Html5OptionsModel.option_html5_scale;
+            ScaleMode = Html5OptionsModel.option_html5_scale;
             SplashPng = Html5OptionsModel.option_html5_splash_png;
             TexturePage = new TexturePageSize(Html5OptionsModel.option_html5_texture_page);
             UseBuiltinFont = Html5OptionsModel.option_html5_usebuiltinfont;

@@ -75,11 +75,11 @@ namespace YoYoProject.Controllers
             set { SetProperty(value, ref pushNotifications); }
         }
 
-        private Scale scale;
-        public Scale Scale
+        private Scale scaleMode;
+        public Scale ScaleMode
         {
-            get { return GetProperty(scale); }
-            set { SetProperty(value, ref scale); }
+            get { return GetProperty(scaleMode); }
+            set { SetProperty(value, ref scaleMode); }
         }
 
         private int splashTime;
@@ -166,7 +166,7 @@ namespace YoYoProject.Controllers
             InterpolatePixels = true;
             OutputDir = @"~/GameMakerStudio2/tvOS";
             PushNotifications = false;
-            Scale = Scale.KeepAspectRatio;
+            ScaleMode = Scale.KeepAspectRatio;
             SplashTime = 10;
             SplashScreen = @"${base_options_dir}\tvos\splash\splash.png";
             SplashScreen2x = @"${base_options_dir}\tvos\splash\splash_2x.png";
@@ -195,7 +195,7 @@ namespace YoYoProject.Controllers
                 option_tvos_interpolate_pixels = InterpolatePixels,
                 option_tvos_output_dir = OutputDir,
                 option_tvos_push_notifications = PushNotifications,
-                option_tvos_scale = Scale,
+                option_tvos_scale = ScaleMode,
                 option_tvos_splashscreen = SplashScreen,
                 option_tvos_splashscreen_2x = SplashScreen2x,
                 option_tvos_splash_time = SplashTime,
@@ -223,7 +223,7 @@ namespace YoYoProject.Controllers
             InterpolatePixels = tvOSOptionsModel.option_tvos_interpolate_pixels;
             OutputDir = tvOSOptionsModel.option_tvos_output_dir;
             PushNotifications = tvOSOptionsModel.option_tvos_push_notifications;
-            Scale = tvOSOptionsModel.option_tvos_scale;
+            ScaleMode = tvOSOptionsModel.option_tvos_scale;
             SplashScreen = tvOSOptionsModel.option_tvos_splashscreen;
             SplashScreen2x = tvOSOptionsModel.option_tvos_splashscreen_2x;
             SplashTime = tvOSOptionsModel.option_tvos_splash_time;
